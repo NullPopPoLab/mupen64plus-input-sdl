@@ -273,8 +273,6 @@ all: $(TARGET)
 install: $(TARGET)
 	$(INSTALL) -d "$(DESTDIR)$(PLUGINDIR)"
 	$(INSTALL) -m 0644 $(INSTALL_STRIP_FLAG) $(TARGET) "$(DESTDIR)$(PLUGINDIR)"
-	$(INSTALL) -d "$(DESTDIR)$(SHAREDIR)"
-	$(INSTALL) -m 0644 "$(SRCDIR)/../data/InputAutoCfg.ini" "$(DESTDIR)$(SHAREDIR)"
 
 uninstall:
 	$(RM) "$(DESTDIR)$(PLUGINDIR)/$(TARGET)"
